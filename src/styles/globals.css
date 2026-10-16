@@ -1,0 +1,231 @@
+/* ═══════════════════════════════════════════
+   تحدّي العقول - Global Styles
+   ═══════════════════════════════════════════ */
+
+@import './variables.css';
+@import './animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-arabic);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  direction: rtl;
+  text-align: right;
+  -webkit-font-smoothing: antialiased;
+
+  /* خلفية بيج دافئ — لا أزرق */
+      background-image:
+    radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.35) 0%, transparent 40%),
+    radial-gradient(circle at 85% 25%, rgba(125, 211, 252, 0.30) 0%, transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(14, 165, 233, 0.25) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(224, 242, 254, 0.5) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-text-primary);
+}
+
+h1 { font-size: var(--font-size-5xl); }
+h2 { font-size: var(--font-size-4xl); }
+h3 { font-size: var(--font-size-3xl); }
+h4 { font-size: var(--font-size-2xl); }
+h5 { font-size: var(--font-size-xl); }
+h6 { font-size: var(--font-size-lg); }
+
+p {
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+a {
+  color: var(--color-human-dark);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent-dark);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all var(--transition-base);
+}
+
+input, textarea, select {
+  font-family: inherit;
+  background-color: var(--color-bg-card);
+  color: var(--color-text-primary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  font-size: var(--font-size-base);
+  transition: all var(--transition-fast);
+  width: 100%;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.15), 0 0 20px rgba(245, 158, 11, 0.2);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* ─── التمرير ─── */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-accent), var(--color-pink));
+  border-radius: var(--border-radius-sm);
+}
+
+/* ─── أدوات مساعدة ─── */
+.container-pfm {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  width: 100%;
+}
+
+/* ═══ تدرجات نصية ═══ */
+.text-gradient-human {
+  background: linear-gradient(135deg, #06b6d4, #22d3ee, #67e8f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-ai {
+  background: linear-gradient(135deg, #a855f7, #c084fc, #e9d5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #f59e0b, #fbbf24, #fcd34d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ═══ التدرج الرئيسي (لامع مبهر) ═══ */
+.text-gradient-hero {
+  background: linear-gradient(
+    120deg,
+    #06b6d4 0%,
+    #f59e0b 25%,
+    #ec4899 50%,
+    #a855f7 75%,
+    #06b6d4 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ═══ نص لامع (Shimmer) ═══ */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #f59e0b 0%,
+    #fbbf24 20%,
+    #fff 40%,
+    #fbbf24 60%,
+    #f59e0b 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 2.5s linear infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+/* ═══ نص متوهج ═══ */
+.text-glow-accent {
+  text-shadow:
+    0 0 20px rgba(245, 158, 11, 0.6),
+    0 0 40px rgba(245, 158, 11, 0.3);
+}
+
+.text-glow-pink {
+  text-shadow:
+    0 0 20px rgba(236, 72, 153, 0.6),
+    0 0 40px rgba(236, 72, 153, 0.3);
+}
+
+.text-glow-human {
+  text-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
+}
+
+.text-glow-ai {
+  text-shadow: 0 0 25px rgba(168, 85, 247, 0.5);
+}
+
+/* ═══ كروت بارزة ═══ */
+.card-bright {
+  background: white;
+  border: 2px solid var(--border-color-light);
+  border-radius: var(--border-radius-lg);
+  box-shadow:
+    0 4px 12px rgba(109, 82, 56, 0.08),
+    0 12px 32px rgba(109, 82, 56, 0.06);
+  transition: all 0.3s ease;
+}
+
+.card-bright:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 8px 20px rgba(109, 82, 56, 0.12),
+    0 20px 48px rgba(109, 82, 56, 0.10);
+}
+
+/* ─── تحديد النص ─── */
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}

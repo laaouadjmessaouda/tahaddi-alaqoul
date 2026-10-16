@@ -1,0 +1,87 @@
+/* ═══════════════════════════════════════════
+   تحدّي العقول - الألوان (بيج دافئ)
+   ═══════════════════════════════════════════ */
+
+:root {
+      /* ─── الخلفية (أزرق فاتح + لمعة سماوية) ─── */
+  --color-bg-primary:     #f0f9ff;   /* أزرق سماوي فاتح جدًا */
+  --color-bg-secondary:   #e0f2fe;   /* أزرق سماوي فاتح */
+  --color-bg-tertiary:    #bae6fd;   /* أزرق فاتح */
+  --color-bg-card:        #ffffff;   /* أبيض نقي للكروت */
+  --color-bg-hover:       #dbeafe;
+  /* ─── النصوص ─── */
+  --color-text-primary:   #3d2914;
+  --color-text-secondary: #6b5238;
+  --color-text-muted:     #9a8570;
+  --color-text-inverse:   #ffffff;
+
+  /* ─── ألوان الفريقين ─── */
+  --color-human:          #06b6d4;
+  --color-human-light:    #22d3ee;
+  --color-human-dark:     #0891b2;
+  --color-human-glow:     rgba(6, 182, 212, 0.5);
+
+  --color-ai:             #a855f7;
+  --color-ai-light:       #c084fc;
+  --color-ai-dark:        #7c3aed;
+  --color-ai-glow:        rgba(168, 85, 247, 0.5);
+
+  /* ─── ألوان التمييز ─── */
+  --color-accent:         #f59e0b;
+  --color-accent-light:   #fbbf24;
+  --color-accent-dark:    #d97706;
+  --color-accent-glow:    rgba(245, 158, 11, 0.6);
+
+  --color-pink:           #ec4899;
+  --color-pink-glow:      rgba(236, 72, 153, 0.5);
+
+  --color-success:        #10b981;
+  --color-danger:         #ef4444;
+
+  /* ─── الحدود (أفتح) ─── */
+  --border-color:         #f0e2cb;
+  --border-color-light:   #f7ecd9;
+  --border-color-dark:    #e8d5b7;
+
+  /* ─── نصف الأقطار ─── */
+  --border-radius-sm:     8px;
+  --border-radius-md:     14px;
+  --border-radius-lg:     20px;
+  --border-radius-xl:     28px;
+
+  /* ─── المسافات ─── */
+  --spacing-xs:  0.25rem;
+  --spacing-sm:  0.5rem;
+  --spacing-md:  1rem;
+  --spacing-lg:  1.5rem;
+  --spacing-xl:  2rem;
+  --spacing-2xl: 3rem;
+
+  /* ─── الخطوط ─── */
+  --font-arabic: 'Cairo', 'Tajawal', system-ui, sans-serif;
+  --font-sans:   'Inter', system-ui, sans-serif;
+
+  --font-size-xs:   0.75rem;
+  --font-size-sm:   0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg:   1.125rem;
+  --font-size-xl:   1.25rem;
+  --font-size-2xl:  1.5rem;
+  --font-size-3xl:  1.875rem;
+  --font-size-4xl:  2.25rem;
+  --font-size-5xl:  3rem;
+
+  /* ─── الظلال (أخف) ─── */
+  --shadow-sm:  0 2px 8px rgba(109, 82, 56, 0.06);
+  --shadow-md:  0 6px 20px rgba(109, 82, 56, 0.09);
+  --shadow-lg:  0 12px 32px rgba(109, 82, 56, 0.12);
+  --shadow-xl:  0 24px 48px rgba(109, 82, 56, 0.15);
+
+  --shadow-human: 0 8px 24px rgba(6, 182, 212, 0.22);
+  --shadow-ai:    0 8px 24px rgba(168, 85, 247, 0.22);
+  --shadow-accent:0 8px 24px rgba(245, 158, 11, 0.28);
+
+  --transition-fast:   150ms ease-in-out;
+  --transition-base:   250ms ease-in-out;
+  --transition-slow:   400ms ease-in-out;
+}
